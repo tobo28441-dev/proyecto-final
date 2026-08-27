@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Detective V2.0</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <!-- Overlay para menú en móviles -->
+    <div id="sidebar-overlay" class="overlay"></div>
+
+    <!-- Menú Lateral -->
+    <aside id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h1>PC DETECTIVE</h1>
+            <span class="version">V2.0</span>
+        </div>
+        <nav class="sidebar-nav">
+            <button class="nav-item active" data-target="dashboard">Dashboard</button>
+            <button class="nav-item" data-target="nuevo-diagnostico">Nuevo diagnóstico</button>
+            <button class="nav-item" data-target="historial">Historial</button>
+            <button class="nav-item" data-target="herramientas">Herramientas</button>
+            <button class="nav-item" data-target="estadisticas">Estadísticas</button>
+        </nav>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <!-- Cabecera Superior -->
+        <header class="top-header">
+            <button id="menu-toggle" class="menu-btn">☰</button>
+            <h2 id="view-title">Dashboard</h2>
+        </header>
+
+        <!-- CONTENEDORES DE VISTAS -->
+        <div class="view-container">
+
+            <!-- VISTA: Dashboard -->
+            <section id="dashboard" class="view active">
+                <div class="hero-section">
+                    <div class="hero-text">
+                        <span class="welcome-badge">BIENVENIDO, DETECTIVE</span>
+                        <h2>Encuentra qué está fallando.</h2>
+                        <p>Analiza síntomas, sigue pistas y guarda cada caso para consultar los resultados posteriormente.</p>
+                        <button id="btn-iniciar-diag" class="btn btn-primary">Iniciar diagnóstico</button>
+                    </div>
+                    <div class="hero-animation">
+                        <div class="scanner">
+                            <div class="scanner-ring-1"></div>
+                            <div class="scanner-ring-2"></div>
+                            <div class="scanner-core">PC</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Estadísticas Iniciales -->
+                <div class="stats-grid mt-2">
+                    <div class="stat-card">
+                        <h3>Casos registrados</h3>
+                        <span id="dash-casos-registrados" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Casos resueltos</h3>
+                        <span id="dash-casos-resueltos" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Herramientas</h3>
+                        <span class="stat-value text-cyan">4</span>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Sistema</h3>
+                        <span class="stat-value text-success">OK</span>
+                    </div>
+                </div>
+
+                <!-- Centro de operaciones -->
+                <h3 class="section-title mt-3">Centro de operaciones</h3>
+                <div class="ops-grid mt-1">
+                    <div class="op-card" data-link="nuevo-diagnostico">
+                        <h4>Nuevo diagnóstico</h4>
+                        <p>Inicia una investigación paso a paso.</p>
+                    </div>
+                    <div class="op-card" data-link="historial">
+                        <h4>Historial</h4>
+                        <p>Consulta los casos guardados.</p>
+                    </div>
+                    <div class="op-card" data-link="herramientas">
+                        <h4>Herramientas</h4>
+                        <p>Utilidades para revisar tu PC.</p>
+                    </div>
+                    <div class="op-card" data-link="estadisticas">
+                        <h4>Estadísticas</h4>
+                        <p>Observa el rendimiento de tus diagnósticos.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- VISTA: Nuevo Diagnóstico -->
+            <section id="nuevo-diagnostico" class="view">
+                <div class="panel text-center">
+                    <div class="icon-placeholder mt-2">⚙️</div>
+                    <h3 class="text-cyan mt-1">Motor de diagnóstico preparado</h3>
+                    <p class="text-muted mt-1 max-w-md mx-auto">
+                        Aquí aparecerán las preguntas dinámicas, las pistas y el resultado final del caso. El sistema interactivo será implementado en la siguiente fase.
+                    </p>
+                </div>
+            </section>
+
+            <!-- VISTA: Historial -->
+            <section id="historial" class="view">
+                <div class="panel">
+                    <p class="text-muted mb-2">Los casos se guardarán localmente en el navegador.</p>
+                    <div id="history-container" class="history-list">
+                        <div class="empty-state">
+                            <span class="text-muted">No hay casos registrados</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- VISTA: Herramientas -->
+            <section id="herramientas" class="view">
+                <div class="ops-grid">
+                    <div class="op-card tool-card">
+                        <span class="badge badge-warning">Próximamente</span>
+                        <h4>Calculadora PSU</h4>
+                        <p>Estima la potencia recomendada de la fuente.</p>
+                    </div>
+                    <div class="op-card tool-card">
+                        <span class="badge badge-warning">Próximamente</span>
+                        <h4>RAM</h4>
+                        <p>Calcula capacidad y configuración de memoria.</p>
+                    </div>
+                    <div class="op-card tool-card">
+                        <span class="badge badge-warning">Próximamente</span>
+                        <h4>Almacenamiento</h4>
+                        <p>Convierte unidades y estima espacio disponible.</p>
+                    </div>
+                    <div class="op-card tool-card">
+                        <span class="badge badge-warning">Próximamente</span>
+                        <h4>Checklist</h4>
+                        <p>Lista de revisión para mantenimiento preventivo.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- VISTA: Estadísticas -->
+            <section id="estadisticas" class="view">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Total de casos</h3>
+                        <span id="stat-total" class="stat-value text-cyan">0</span>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Resueltos</h3>
+                        <span id="stat-resueltos" class="stat-value text-success">0</span>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Tasa de resolución</h3>
+                        <span id="stat-tasa" class="stat-value text-cyan">0%</span>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="data/diagnostics.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
