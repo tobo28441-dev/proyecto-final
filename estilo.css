@@ -1,0 +1,90 @@
+.form_group {
+    margin-bottom: 1.2rem;
+}
+
+/* Etiquetas */
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333e64;
+    font-size: 0.95rem;
+}
+
+/* Campos de entrada */
+input {
+    width: 100%;
+    padding: 0.75rem 0.9rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #fff;
+    outline: none;
+    box-sizing: border-box;
+    transition: 
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background-color 0.3s ease;
+}
+
+/* Cuando el usuario selecciona el campo */
+input:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.15);
+}
+
+/* Campo con error */
+input.error {
+    border-color: #e74c3c;
+    background-color: #fceae9;
+}
+
+/* Mensaje de error */
+.error-message {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin-top: 0.3rem;
+    display: block;
+}
+
+/* Botón principal */
+.btn-primary {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 
+        background-color 0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el mouse */
+.btn-primary:hover {
+    background-color: #43a047;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Efecto al hacer clic */
+.btn-primary:active {
+    transform: scale(0.98);
+}
+
+/* Diseño para celulares */
+@media (max-width: 600px) {
+    input {
+        padding: 0.7rem;
+        font-size: 0.95rem;
+    }
+
+    .btn-primary {
+        padding: 0.7rem 1rem;
+        font-size: 0.95rem;
+    }
+}
