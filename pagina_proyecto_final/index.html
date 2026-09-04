@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Tobo | Portafolio</title>
+    <link rel="stylesheet" href="estilo.css">
+    <!-- Tipografía Futurista y Acogedora desde Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">&lt;DT /&gt;</div>
+        <nav>
+            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#contacto" class="btn-nav">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sección Principal / Hero -->
+        <section id="sobre-mi" class="hero section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <p class="greeting">// HOLA, SOY</p>
+                    <h1>Daniel Tobo</h1>
+                    <h2>Estudiante de Ingeniería de Sistemas e Informática</h2>
+                    <p class="bio">
+                        Desarrollador apasionado por la creación de software, diagnóstico e interacción web, análisis de datos y desarrollo de videojuegos 2D. Enfocado en construir soluciones funcionales, estructuradas y con gran atención al detalle.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#proyectos" class="btn btn-primary">Ver Proyectos</a>
+                        <a href="#contacto" class="btn btn-secondary">Contactar</a>
+                    </div>
+                </div>
+                <div class="hero-photo-wrapper">
+                    <!-- Línea 44: Foto de perfil -->
+                    <img src="foto.png" alt="Foto de Daniel Tobo" class="hero-photo">
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Proyectos -->
+        <section id="proyectos" class="section">
+            <h2 class="section-title"><span>01.</span> Proyectos Destacados</h2>
+            
+            <div class="projects-grid">
+                
+                <!-- Proyecto 1 -->
+                <article class="project-card">
+                    <div class="project-header">
+                        <span class="project-type">Aplicación Web / Diagnóstico</span>
+                        <h3>PC Detective V2</h3>
+                    </div>
+                    <p>Plataforma web interactiva orientada al diagnóstico informático, estructurada con navegación fluida por secciones y diseño de dashboard intuitivo.</p>
+                    <ul class="tech-stack">
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </article>
+
+                <!-- Proyecto 2 -->
+                <article class="project-card">
+                    <div class="project-header">
+                        <span class="project-type">Videojuego 2D</span>
+                        <h3>Lluvia Espacial</h3>
+                    </div>
+                    <p>Juego arcade espacial desarrollado en Python con mecánicas de esquive de meteoritos, control de jugador, detección de colisiones y sistema de vidas.</p>
+                    <ul class="tech-stack">
+                        <li>Python</li>
+                        <li>Pygame</li>
+                    </ul>
+                </article>
+
+                <!-- Proyecto 3 -->
+                <article class="project-card">
+                    <div class="project-header">
+                        <span class="project-type">Videojuego Educativo</span>
+                        <h3>Cazadores de Sílabas</h3>
+                    </div>
+                    <p>Proyecto interactivo enfocado en aprendizaje a través de mecánicas de captura de objetos en movimiento y ciclos de juego optimizados.</p>
+                    <ul class="tech-stack">
+                        <li>Python</li>
+                        <li>Pygame</li>
+                    </ul>
+                </article>
+
+                <!-- Proyecto 4 -->
+                <article class="project-card">
+                    <div class="project-header">
+                        <span class="project-type">Sistema de Gestión</span>
+                        <h3>Sistema de Reservas & Modelado UML</h3>
+                    </div>
+                    <p>Diseño y desarrollo de arquitecturas orientadas a objetos, implementación de lógica de negocio en C# y diagramación formal de casos de uso y clases.</p>
+                    <ul class="tech-stack">
+                        <li>C#</li>
+                        <li>POO</li>
+                        <li>UML</li>
+                    </ul>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Sección de Habilidades -->
+        <section id="habilidades" class="section">
+            <h2 class="section-title"><span>02.</span> Habilidades & Tecnologías</h2>
+            
+            <div class="skills-wrapper">
+                <div class="skill-category">
+                    <h3>Lenguajes & Web</h3>
+                    <p>Python, C#, JavaScript, HTML5, CSS3</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Librerías & Frameworks</h3>
+                    <p>Pygame, Pandas, Matplotlib, Seaborn</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Herramientas & Entornos</h3>
+                    <p>Git, GitHub, `uv` (Python), Configuración de Hardware & BIOS</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Fundamentos</h3>
+                    <p>Programación Orientada a Objetos (POO), Modelado UML, Análisis de Datos</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Contacto (Con WhatsApp) -->
+        <section id="contacto" class="section contact-section">
+            <h2 class="section-title"><span>03.</span> Contacto</h2>
+            <p>¿Tienes alguna consulta o propuesta de proyecto? Puedes contactarme a través de mis redes o enviarme un mensaje directo.</p>
+            <div class="contact-links">
+                <a href="https://github.com" target="_blank" class="btn btn-secondary">GitHub</a>
+                <a href="https://wa.me/573007979049" target="_blank" class="btn btn-secondary">WhatsApp</a>
+                <a href="mailto:tu-email@correo.com" class="btn btn-primary">Enviar Correo</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Daniel Tobo. Diseñado y construido con HTML & CSS.</p>
+    </footer>
+
+</body>
+</html>
